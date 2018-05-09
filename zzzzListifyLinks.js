@@ -7,7 +7,9 @@ function escapeHtml(str) {
 }
 
 
-var saveOriginal = document.getElementById("thelinks").innerHTML;
+//var saveOriginal = document.getElementById("thelinks").innerHTML;
+var saveOriginal = document.body.innerHTML;
+
 var links = document.getElementsByTagName('a');
 var i;
 var txt = "";
@@ -28,7 +30,7 @@ if (links.length > 0){
       txt += "</ol>";
 }
 
-document.getElementById("thelinks").innerHTML = txt;
+document.body.innerHTML = txt;
 
 //document.innerHTML += '<div style="position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;"></div>';
 document.body.innerHTML += '<div><h1>--- original text (unchanged) ---</h1>';
