@@ -7,12 +7,13 @@ for (i = 0; i < links.length; ++i) {
       txt += "<ol>";
     }
     // Do something with links[i].href
-    txt = txt + '<li>';
-    txt = txt + '<a href="' + links[i].href + '">' + links[i].href +  '</a><br /><br />';
-    if (trim(links[i].innerHTML) != "") {
-      txt = txt + '<a href="' + links[i].href + '">' + links[i].innerHTML +  '</a><br />';
+    txt += '<li>';
+    txt += '<a href="' + links[i].href + '">' + links[i].href +  '</a><br />';
+    if (links[i].innerHTML) {
+      txt += '<a href="' + links[i].href + '">' + links[i].innerHTML +  '</a><br />';
     }
-    txt = txt + '</li>';
+    txt += '<br />'
+    txt += '</li>';
 }
 if (links.length > 0){
       txt += "</ol>";
