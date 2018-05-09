@@ -19,9 +19,10 @@ for (i = 0; i < links.length; ++i) {
     }
     // Do something with links[i].href
     txt += '<li>';
-    txt += '<a href="' + links[i].href + '">' + links[i].href +  '</a><br />';
+    txt += '<a href="' + links[i].href + 
+                             '" target="' + links[i].href + '">' + links[i].href +  '</a><br />';
     if (links[i].innerHTML) {
-      txt += '<a href="' + links[i].href + '">' + links[i].innerHTML +  '</a><br />';
+      txt += '<a href="' + links[i].href + '" target="' + links[i].href + '">' + links[i].innerHTML +  '</a><br />';
     }
     txt += '<br />'
     txt += '</li>';
